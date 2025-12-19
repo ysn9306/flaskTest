@@ -1,0 +1,17 @@
+// requirements.txt (ex. pip freeze > requirements.txt =>그러나 아래 3개 라이브러리만
+필요하므로 금번 실습에서는 아래 내용만 따로 저장후 github로 전송)
+flask
+pymysql
+gunicorn
+
+// db.py ==> host=’mariadb’, port=3306 으로 설정 (host는 cloudtype mariadb명 사용)
+def __init__(self):
+  self.connection = None
+  try:
+    self.connection = pymysql.connect(
+      # host='localhost',
+      host='mariadb',
+      port=3306,
+      database='test', # test 데이터베이스 사용
+      user='root',
+      password='120408'
